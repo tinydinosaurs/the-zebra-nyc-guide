@@ -1,25 +1,20 @@
-# Super simple build with npm scripts
+# Code challenge
+For The Zebra. Started on Oct. 10, 2016
 
-After fiddling around with Gulp builds, I decided to try my hand at npm scripts. This repo is the result.
+## Requirements
+* Built in HTML5, CSS, and JavaScript
+* Responsive
+* Compatible with Chrome, Firefox, and Internet Explorer 9.
+* Use CSS preprocessor and build tool of my choice
+* No HTML/CSS frameworks
+* Pixel perfect (ish)
 
-## Features
-* Watches sass, javascript, and html files for changes
-* compiles sass to css
-* compiles es2015 syntax and bundles javascript files
-* Serves html, reloads page on change
-* Includes app folder with starter files: scripts/entry.js, styles/main.scss, index.html
-
-## Installation
-* Clone this repo into your project folder
-* Remove git history with rm -rf .git
-* Run npm install to grab all the node modules
-* Install your own dependencies
-* Set up a nice repo for yourself using the the service of your choice
-* `npm run start` to start the server and watch for changes
-
-Currently not set up for linting or testing or really doing anything other than building simple javascript applications. It also probably has a few bugs. Really, I'm just storing it here for myself, but if you accidentally stumble across this repo, feel free to take it and use it as you please. If you do take it and like it, please star it for me!
-
-## Future Features
-* Compress image files and copy them to dist folder (currently nothing happens to images at all)
-* Support for linting
-* Support for testing
+## Tools
+* My own build tool, with the following:
+  * `node-sass` to transpile scss
+  * `babelify` and `browserify` to transpile and bundle JavaScript
+  * `browser-sync` to serve files
+  * `onchange` to watch for changes
+* jQuery for smooth scroll
+* Browserling to test in IE9
+* Trello to track progress
