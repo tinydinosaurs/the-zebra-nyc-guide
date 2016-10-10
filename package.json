@@ -4,7 +4,7 @@
   "description": "you have discovered all my secrets",
   "main": "main.js",
   "scripts": {
-    "clean": "echo => 'cleaning files' && rm -rf dist/images/*",
+    "clean": "rm -rf dist/images/*",
     "autoprefix": "echo => 'adding vendor prefixes to css' && postcss -u autoprefixer -r dist/css/*",
     "build:dist": "if [ ! -d dist ]; then mkdir dist; fi",
     "build:images": "if [ ! -d dist/images ]; then mkdir dist/images; fi",
