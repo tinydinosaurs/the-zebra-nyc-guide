@@ -10,7 +10,6 @@ p + p {
   margin-top: 1.25rem;
 }
 
-// make sure I'm linked correctly
 body {
   line-height: 1.625rem;
   color: $color-body-text;
@@ -49,6 +48,7 @@ footer {
   text-align: center;
 }
 
+// breakpoints are based on fluid layout, not breakpoints specific to a viewport
 @media screen and (max-width: 960px) {
   h1 {
     font-size: calc(#{$size-header-1} * 1.125);

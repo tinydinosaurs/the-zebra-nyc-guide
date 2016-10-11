@@ -1,8 +1,7 @@
 header {
   color: $color-hero-text;
-  background: url('images/bg-nyc.png') red no-repeat center center;
+  background: url('images/bg-nyc.png') #1c1c1c no-repeat center center;
   background-size: cover;
-  // height: 100vh;
   background-position: 0 -12vw;
   padding-top: 3rem;
 }
@@ -31,6 +30,7 @@ header h1 {
 }
 
 
+// breakpoints are based on fluid layout, not breakpoints specific to a viewport
 @media screen and (max-width: 1252px) {
   #hero {
     padding-bottom: 11vw;
