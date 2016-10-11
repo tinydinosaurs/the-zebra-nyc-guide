@@ -1,0 +1,58 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat:400,700';
+
+html {
+  font-size: $size-baseline-font;
+  font-family: "montserrat", sans-serif;
+}
+
+p + p {
+  margin-top: 1.25rem;
+}
+
+// make sure I'm linked correctly
+body {
+  background-color: pink;
+  padding: 0 17vw;
+  line-height: 1.625rem;
+  color: $color-body-text;
+}
+
+h1 {
+  font-size: $size-header-1;
+  font-weight: 900;
+  line-height: 4.375rem;
+}
+
+h2 {
+  font-size: $size-header-2;
+  text-align: center;
+  margin: 1.125rem 0;
+}
+
+h3 {
+  font-size: $size-header-3;
+  margin: 1.5rem 0;
+}
+
+h4 {
+  font-size: $size-header-4;
+}
+
+img {
+  max-width: 100%;
+}
+
+footer {
+  text-align: center;
+}
+
+@media screen and (max-width: 860px) {
+  body {
+    padding: 14.4vw;
+  }
+
+  h1 {
+    font-size: calc(#{$size-header-1} / 1.25);
+    line-height: 3.5rem;
+  }
+}
