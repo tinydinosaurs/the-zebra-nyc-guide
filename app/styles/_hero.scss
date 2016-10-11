@@ -1,0 +1,67 @@
+header {
+  color: $color-hero-text;
+  background: url('images/bg-nyc.png') #1c1c1c no-repeat center center;
+  background-size: cover;
+  background-position: 0 -12vw;
+  padding-top: 3rem;
+}
+
+header img {
+  width: 7rem;
+}
+
+header h1 {
+  margin-bottom: 2rem;
+  letter-spacing: 0.0825rem;
+}
+
+#hero {
+  padding-top: 13.5vw;
+  padding-bottom: 14.25vw;
+
+}
+
+#hero-text {
+  font-size: $size-hero-text;
+  font-weight: 400;
+  line-height: 1.85vw;
+  width: 55vw;
+  letter-spacing: 0.0825rem;
+}
+
+
+// breakpoints are based on fluid layout, not breakpoints specific to a viewport
+@media screen and (max-width: 1252px) {
+  #hero {
+    padding-bottom: 11vw;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  header {
+    background-position: 0;
+  }
+  #hero {
+    padding-top: 11vw;
+    padding-bottom: 11vw;
+  }
+  #hero-text {
+    font-size: calc(#{$size-hero-text} * 1.25);
+    line-height: 2.25vw;
+    width: 65vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  #hero-text {
+    font-size: calc(#{$size-hero-text} * 1.5);
+    line-height: 2.66vw;
+    width: 75vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #hero-text {
+    display: none;
+  }
+}
