@@ -11,28 +11,35 @@
 
 </head>
 <body>
-  <main>
 
-    <header>
+
+    <header id="top">
       <img src="images/logo-zebra.png" alt="the zebra logo">
       <div id="hero">
         <h1>The New York City <br />Guide to Getting Around.</h1>
         <p id="hero-text">We know that New York is exciting but it can also be intimidating. The secrets to navigating New York doesn’t just have to be for locals. The Zebra has put together this simple guide to getting around so you can navigate New York like a pro.</p>
       </div>
     </header>
-    <section class="nav-elements">
+    <main>
+    <!-- <section class="nav-elements"> -->
       <div class="breadcrumbs">
         <!-- hard coding breadcrumbs -->
         <ul>
-          <l1>Compare Car Insurance</l1>
-          <l1>New York</l1>
-          <l1>New York City Transportation Guide</l1>
+          <l1 class="breadcrumb">
+            <a href="#top">Compare Car Insurance</a>
+          </l1>
+          <l1 class="breadcrumb">
+            <a href="#top">New York</a>
+          </l1>
+          <l1 class="breadcrumb">
+            <a class="current-page" href="#top">New York City Transportation Guide</a>
+          </l1>
         </ul>
       </div>
 
       <nav>
         <h2>NYC Transportation Categories</h2>
-        <ul>
+        <ul class="nav-items">
           <li>
             <a href="#airports">
               <img src="images/icon-airplane.svg" alt="navigation link to airport section" />
@@ -65,7 +72,7 @@
 
         </ul>
       </nav>
-    </section>
+    <!-- </section> -->
 
     <section id="airports">
       <h2>Airports</h2>
