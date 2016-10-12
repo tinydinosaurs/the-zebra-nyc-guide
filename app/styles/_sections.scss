@@ -3,7 +3,12 @@ section {
   padding-bottom: 10vw;
 }
 
-section a {
+.transport h2 {
+  text-align: center;
+  margin-bottom: 9rem;
+}
+
+.transport a {
   text-decoration: none;
   color: $color-accent;
 }
@@ -28,42 +33,54 @@ figcaption span {
 }
 
 
-////////////////////////////
-// airports section styles//
-////////////////////////////
-#section-airports::before {
-  content: "Airports";
-  display: block;
-  width: 100%;
-  // z-index: -100;
-  font-size: 12vw;
-  font-weight: 700;
-  color: #fbfbfb;
-  text-align: center;
+/////////////////////////////
+// airports section styles //
+/////////////////////////////
+#section-airports {
+  &::before {
+    content: "Airports";
+    display: block;
+    width: 100%;
+    font-size: 14vw;
+    font-weight: 700;
+    color: #fbfbfb;
+    text-align: center;
+  }
+
+  h2 {
+    @include sh-title;
+    &::before {
+      background: url('images/icon-airplane.svg') no-repeat;
+      @include sh-icon;
+      bottom: 2rem;
+      left: 45.75%;
+    }
+    &::after {
+      @include sh-accent;
+    }
+  }
 }
 
-#section-airports h2 {
-  @include sh-title;
-}
-
-#section-airports h2::after {
-  @include sh-accent;
-}
-
-////////////////////////
-// cabs section styles//
-////////////////////////
+/////////////////////////
+// cabs section styles //
+/////////////////////////
 
 #section-cabs {
   &::before {
     content: "Cabs";
     @extend #section-airports::before;
-  }
+    }
 
   h2 {
-  @include sh-title;
+    @include sh-title;
+    &::before {
+      background: url('images/icon-taxi.svg') no-repeat;
+      @include sh-icon;
+      bottom: 3rem;
+      left: 47%;
+    }
     &::after {
-    @include sh-accent;
+      @include sh-accent;
     }
   }
   ol {
@@ -76,24 +93,38 @@ figcaption span {
 //////////////////////////
 // subway section styles//
 //////////////////////////
-#section-subways::before{
-  content: "Subways";
-  @extend #section-airports::before;
+#section-subways {
+  &::before{
+    content: "Subways";
+    @extend #section-airports::before;
+  }
+
+  h2 {
+    @include sh-title;
+
+    &::before {
+      background: url('images/icon-subways.svg') no-repeat;
+      @include sh-icon;
+      bottom: 2.25rem;
+      left: 48%;
+    }
+    &::after {
+      @include sh-accent;
+    }
+  }
 }
 
-#section-subways h2 {
-  @include sh-title;
-}
 
-#section-subways h2::after {
-  @include sh-accent;
-}
-
-
+// media queries
 @media screen and (max-width: 800px) {
+  .transport h2 {
+  margin-bottom: 6rem;
+  }
+
   .section-image {
     width: 50vw;
   }
+
   figcaption {
     font-size: calc(#{$size-small-text} * 0.9);
   }
@@ -104,6 +135,7 @@ figcaption span {
     width: 100%;
     margin-bottom: 6vw;
   }
+
   figcaption {
     font-size: $size-small-text;
   }

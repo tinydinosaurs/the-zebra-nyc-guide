@@ -19,8 +19,7 @@ $size-small-text: 0.875rem;
 // sh stands for section header
 @mixin sh-title {
   position: relative;
-  border: 1px solid green;
-  margin-bottom: 9rem;
+  // margin-bottom: 9rem;
   // display: inline-block;
 }
 
@@ -28,6 +27,14 @@ $size-small-text: 0.875rem;
   content: "__";
   position: absolute;
   top: 1.5rem;
-  left: 48%;
+  left: 47.5%;
   color: $color-accent;
+}
+
+@mixin sh-icon {
+  content: "";
+  position: absolute;
+  background-size: contain;
+  width: 4rem;
+  height: 2.5rem;
 }
