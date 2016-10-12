@@ -1,0 +1,110 @@
+section {
+  padding-top: 10vw;
+  padding-bottom: 10vw;
+}
+
+section a {
+  text-decoration: none;
+  color: $color-accent;
+}
+
+.section-image {
+  width: 30vw;
+  float: right;
+  margin-left: 3vw;
+  margin-bottom: 3vw;
+  webkit-box-shadow: 0px 0px 20px 5px rgba(240,240,240,1);
+-moz-box-shadow: 0px 0px 20px 5px rgba(240,240,240,1);
+box-shadow: 0px 0px 20px 5px rgba(240,240,240,1);
+}
+
+figcaption {
+  font-size: $size-small-text;
+  padding: 1rem;
+}
+
+figcaption span {
+  color: #9b9b9b;
+}
+
+
+////////////////////////////
+// airports section styles//
+////////////////////////////
+#section-airports::before {
+  content: "Airports";
+  display: block;
+  width: 100%;
+  // z-index: -100;
+  font-size: 12vw;
+  font-weight: 700;
+  color: #fbfbfb;
+  text-align: center;
+}
+
+#section-airports h2 {
+  @include sh-title;
+}
+
+#section-airports h2::after {
+  @include sh-accent;
+}
+
+////////////////////////
+// cabs section styles//
+////////////////////////
+
+#section-cabs {
+  &::before {
+    content: "Cabs";
+    @extend #section-airports::before;
+  }
+
+  h2 {
+  @include sh-title;
+    &::after {
+    @include sh-accent;
+    }
+  }
+  ol {
+    list-style-position: inside;
+    margin-left: 1.25rem;
+    margin-top: 1.25rem;
+  }
+}
+
+//////////////////////////
+// subway section styles//
+//////////////////////////
+#section-subways::before{
+  content: "Subways";
+  @extend #section-airports::before;
+}
+
+#section-subways h2 {
+  @include sh-title;
+}
+
+#section-subways h2::after {
+  @include sh-accent;
+}
+
+
+@media screen and (max-width: 800px) {
+  .section-image {
+    width: 50vw;
+  }
+  figcaption {
+    font-size: calc(#{$size-small-text} * 0.9);
+  }
+}
+
+@media screen and (max-width: 556px) {
+  .section-image {
+    width: 100%;
+    margin-bottom: 6vw;
+  }
+  figcaption {
+    font-size: $size-small-text;
+  }
+}
