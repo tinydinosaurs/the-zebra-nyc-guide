@@ -1,5 +1,9 @@
 @import 'https://fonts.googleapis.com/css?family=Montserrat:400,700';
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-size: $size-baseline-font;
   // font-family: "montserrat", sans-serif;
@@ -62,5 +66,11 @@ footer {
 @media screen and (max-width: 800px) {
   header, nav, section, footer {
     padding: 0 10vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  p {
+    color: magenta;
   }
 }

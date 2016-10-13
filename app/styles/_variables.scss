@@ -19,15 +19,14 @@ $size-small-text: 0.875rem;
 // sh stands for section header
 @mixin sh-title {
   position: relative;
-  // margin-bottom: 9rem;
-  // display: inline-block;
 }
 
 @mixin sh-accent {
   content: "__";
   position: absolute;
   top: 1.5rem;
-  left: 47.5%;
+  left: 0;
+  width: 100%;
   color: $color-accent;
 }
 
@@ -35,6 +34,17 @@ $size-small-text: 0.875rem;
   content: "";
   position: absolute;
   background-size: contain;
-  width: 4rem;
+  background-position: center;
+  width: 100%;
+  left: 0;
   height: 2.5rem;
+}
+
+@mixin sh-bg {
+  display: block;
+  width: 100%;
+  font-size: 14vw;
+  font-weight: 700;
+  color: #fbfbfb;
+  text-align: center;
 }

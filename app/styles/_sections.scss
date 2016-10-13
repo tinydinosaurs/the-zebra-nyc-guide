@@ -1,6 +1,6 @@
-section {
-  padding-top: 10vw;
-  padding-bottom: 10vw;
+section, footer {
+  padding-top: 14vw;
+  padding-bottom: 12vw;
 }
 
 .transport h2 {
@@ -32,19 +32,13 @@ figcaption span {
   color: #9b9b9b;
 }
 
-
 /////////////////////////////
 // airports section styles //
 /////////////////////////////
 #section-airports {
   &::before {
     content: "Airports";
-    display: block;
-    width: 100%;
-    font-size: 14vw;
-    font-weight: 700;
-    color: #fbfbfb;
-    text-align: center;
+    @include sh-bg;
   }
 
   h2 {
@@ -53,7 +47,6 @@ figcaption span {
       background: url('images/icon-airplane.svg') no-repeat;
       @include sh-icon;
       bottom: 2rem;
-      left: 45.75%;
     }
     &::after {
       @include sh-accent;
@@ -68,7 +61,7 @@ figcaption span {
 #section-cabs {
   &::before {
     content: "Cabs";
-    @extend #section-airports::before;
+    @include sh-bg;
     }
 
   h2 {
@@ -77,7 +70,6 @@ figcaption span {
       background: url('images/icon-taxi.svg') no-repeat;
       @include sh-icon;
       bottom: 3rem;
-      left: 47%;
     }
     &::after {
       @include sh-accent;
@@ -96,7 +88,7 @@ figcaption span {
 #section-subways {
   &::before{
     content: "Subways";
-    @extend #section-airports::before;
+    @include sh-bg;
   }
 
   h2 {
@@ -106,7 +98,6 @@ figcaption span {
       background: url('images/icon-subways.svg') no-repeat;
       @include sh-icon;
       bottom: 2.25rem;
-      left: 48%;
     }
     &::after {
       @include sh-accent;
@@ -114,8 +105,53 @@ figcaption span {
   }
 }
 
+.how-to-ride {
+  text-align: center;
+}
 
-// media queries
+.row {
+  margin-top: 2rem;
+}
+
+.col-2 {
+  float: left;
+  width: 29vw;
+  // padding: 1.3em;
+}
+
+.col-2:first-child {
+  margin-right: 6vw;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+////////////////////
+// foorter styles //
+////////////////////
+.copyright {
+  font-weight: 700;
+  margin-top: 10vw;
+}
+
+///////////////////
+// media queries //
+///////////////////
+
+@media screen and (max-width: 960px) {
+  .col-2 {
+    width: 32vw;
+  }
+}
+
+
 @media screen and (max-width: 800px) {
   .transport h2 {
   margin-bottom: 6rem;
@@ -128,9 +164,13 @@ figcaption span {
   figcaption {
     font-size: calc(#{$size-small-text} * 0.9);
   }
+
+  .col-2 {
+    width: 37vw;
+  }
 }
 
-@media screen and (max-width: 556px) {
+@media screen and (max-width: 600px) {
   .section-image {
     width: 100%;
     margin-bottom: 6vw;
@@ -138,5 +178,19 @@ figcaption span {
 
   figcaption {
     font-size: $size-small-text;
+  }
+
+  .row {
+    margin-top: 0;
+  }
+
+  .col-2 {
+    float: none;
+    width: 80vw;
+    // padding: 1.3em;
+  }
+
+  .col-2:first-child {
+    margin-right: 0;
   }
 }
