@@ -121,6 +121,8 @@ nav h2 {
 ///////////////////////////////////////////
 // **********  MEDIA QUERIES  ********** //
 ///////////////////////////////////////////
+
+// medium to small laptops
 @media screen and (max-width: 960px) {
   .breadcrumbs {
     padding-left: 15vw;
@@ -147,16 +149,44 @@ nav h2 {
 
 }
 
-
-
+// small laptops and tablets
 @media screen and (max-width: 800px) {
   .breadcrumbs {
     padding-left: 10vw;
     padding-right: 10vw;
     font-size: calc(#{$size-small-text} * 0.85);
   }
+
+  .nav-items {
+    li {
+      width: 13.5vw;
+      height: 13.5vw;
+    }
+
+    li + li {
+      margin-left: 2.33vw;
+    }
+
+    .transportation {
+      position: relative;
+      display: inline-block;
+      width: 13.5vw;
+      height: 13.5vw;
+    }
+
+    a {
+      padding-top: 12vw;
+    }
+  }
+
+  .airports-link::before,  .cabs-link::before, .subways-link::before, .bus-link::before, .cars-link::before {
+    top: 4vw;
+    height: 5vw;
+  }
+
 }
 
+// mobile phones
 @media screen and (max-width: 600px) {
   .breadcrumbs {
     font-size: 0.65rem;
@@ -187,10 +217,21 @@ nav h2 {
       border-bottom: 1px solid $color-borders-lighter;
     }
 
+    .transportation {
+      height: 3rem;
+    }
+
     a {
       color: inherit;
       text-align: left;
       padding-top: 0;
+
+      span {
+        margin: 0;
+        &:hover {
+          color: $color-accent;
+        }
+      }
     }
 
 ////////////////////////////

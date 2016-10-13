@@ -29,21 +29,24 @@ header h1 {
   letter-spacing: 0.0825rem;
 }
 
+///////////////////////////////////////////
+// **********  MEDIA QUERIES  ********** //
+///////////////////////////////////////////
 
 // breakpoints are based on fluid layout, not breakpoints specific to a viewport
 @media screen and (max-width: 1252px) {
   #hero {
-    padding-bottom: 11vw;
+    padding-bottom: 12vw;
   }
 }
-
+// laptops
 @media screen and (max-width: 960px) {
   header {
     background-position: 0;
   }
   #hero {
     padding-top: 11vw;
-    padding-bottom: 11vw;
+    padding-bottom: 13vw;
   }
   #hero-text {
     font-size: calc(#{$size-hero-text} * 1.25);
@@ -51,8 +54,17 @@ header h1 {
     width: 65vw;
   }
 }
-
+// small laptops and tablets
 @media screen and (max-width: 800px) {
+  header {
+    padding-top: 2rem;
+  }
+
+  #hero {
+    padding-top: 10vw;
+    padding-bottom: 12vw;
+  }
+
   #hero-text {
     font-size: calc(#{$size-hero-text} * 1.5);
     line-height: 2.66vw;
@@ -60,8 +72,19 @@ header h1 {
   }
 }
 
+// mobile phones
 @media screen and (max-width: 600px) {
+  header {
+    padding-top: 1rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+    line-height: 2.25rem;
+  }
+
   #hero-text {
-    display: none;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
   }
 }
