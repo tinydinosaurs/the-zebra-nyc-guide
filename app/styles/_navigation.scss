@@ -62,9 +62,9 @@ nav h2 {
     //
     span {
       background-color: $color-accent;
-      display: block;
-      width: 12vh;
-      margin: 0 auto;
+      display: inline-block;
+      width: 6rem;
+      // margin: 0 auto;
       border-radius: 100px;
     }
   }
@@ -145,6 +145,10 @@ nav h2 {
       width: 12vw;
       height: 12vw;
     }
+
+    a span {
+      width: 5rem;
+    }
   }
 
 }
@@ -176,6 +180,10 @@ nav h2 {
 
     a {
       padding-top: 12vw;
+
+      span {
+        width: 4.5rem;
+      }
     }
   }
 
