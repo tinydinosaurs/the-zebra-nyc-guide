@@ -5,6 +5,7 @@ $color-section-background: #fbfbfb;
 $color-caption-text: #4a4a4a;
 $color-accent: #1cbeec;
 $color-borders: #e1e1e1;
+$color-borders-lighter: #fbfbfb;
 
 $size-baseline-font: 16px;
 $size-header-1: 4.75vw;
@@ -48,4 +49,18 @@ $size-small-text: 0.875rem;
   font-weight: 700;
   color: #fbfbfb;
   text-align: center;
+}
+
+// navigation links
+
+@mixin nav-desktop-before {
+  content: "";
+  display: block;
+  position: absolute;
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  left: 0;
+  top: 3.5vw;
+  height: 3.5vw;
 }
