@@ -21,4 +21,4 @@ For The Zebra. Started on Oct. 10, 2016
 * Trello to track progress
 * Git to version
 * GitHub to store project remotely
-* Surge for a live version
+* Surge for a live version of the project
