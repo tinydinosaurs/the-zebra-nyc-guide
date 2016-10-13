@@ -1,10 +1,23 @@
 (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
-// make sure I'm linked correctly
+// In case any Vonnegut fans check the console.
+// It's how I test my javascript.
 console.log('goodbye blue monday');
-let $ = require('jquery');
 
-// make sure require works
-$('main').append('<p>jquery is functional</p>');
+var $ = require('jquery');
+
+$(document).ready(function () {
+	$('a[href^="#"]').on('click', function (evt) {
+		evt.preventDefault();
+		var target = this.hash;
+		var $target = $(target);
+
+		$('html, body').stop().animate({
+			'scrollTop': $target.offset().top
+		}, 2000, 'swing', function () {
+			window.location.hash = target;
+		});
+	});
+});
 
 },{"jquery":2}],2:[function(require,module,exports){
 /*!
