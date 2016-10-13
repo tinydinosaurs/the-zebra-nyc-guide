@@ -1,5 +1,9 @@
 @import 'https://fonts.googleapis.com/css?family=Montserrat:400,700';
 
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-size: $size-baseline-font;
   // font-family: "montserrat", sans-serif;
@@ -23,17 +27,16 @@ h1 {
 
 h2 {
   font-size: $size-header-2;
-  text-align: center;
-  margin: 1.125rem 0;
 }
 
 h3 {
   font-size: $size-header-3;
-  margin: 1.5rem 0;
+  margin: 3rem 0 1.25rem 0;
 }
 
 h4 {
   font-size: $size-header-4;
+  margin-top: 1.25rem;
 }
 
 img {
@@ -63,5 +66,11 @@ footer {
 @media screen and (max-width: 800px) {
   header, nav, section, footer {
     padding: 0 10vw;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  p {
+    color: magenta;
   }
 }

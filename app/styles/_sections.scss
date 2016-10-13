@@ -1,0 +1,196 @@
+section, footer {
+  padding-top: 14vw;
+  padding-bottom: 12vw;
+}
+
+.transport h2 {
+  text-align: center;
+  margin-bottom: 9rem;
+}
+
+.transport a {
+  text-decoration: none;
+  color: $color-accent;
+}
+
+.section-image {
+  width: 30vw;
+  float: right;
+  margin-left: 3vw;
+  margin-bottom: 3vw;
+  webkit-box-shadow: 0px 0px 20px 5px rgba(240,240,240,1);
+-moz-box-shadow: 0px 0px 20px 5px rgba(240,240,240,1);
+box-shadow: 0px 0px 20px 5px rgba(240,240,240,1);
+}
+
+figcaption {
+  font-size: $size-small-text;
+  padding: 1rem;
+}
+
+figcaption span {
+  color: #9b9b9b;
+}
+
+/////////////////////////////
+// airports section styles //
+/////////////////////////////
+#section-airports {
+  &::before {
+    content: "Airports";
+    @include sh-bg;
+  }
+
+  h2 {
+    @include sh-title;
+    &::before {
+      background: url('images/icon-airplane.svg') no-repeat;
+      @include sh-icon;
+      bottom: 2rem;
+    }
+    &::after {
+      @include sh-accent;
+    }
+  }
+}
+
+/////////////////////////
+// cabs section styles //
+/////////////////////////
+
+#section-cabs {
+  &::before {
+    content: "Cabs";
+    @include sh-bg;
+    }
+
+  h2 {
+    @include sh-title;
+    &::before {
+      background: url('images/icon-taxi.svg') no-repeat;
+      @include sh-icon;
+      bottom: 3rem;
+    }
+    &::after {
+      @include sh-accent;
+    }
+  }
+  ol {
+    list-style-position: inside;
+    margin-left: 1.25rem;
+    margin-top: 1.25rem;
+  }
+}
+
+//////////////////////////
+// subway section styles//
+//////////////////////////
+#section-subways {
+  &::before{
+    content: "Subways";
+    @include sh-bg;
+  }
+
+  h2 {
+    @include sh-title;
+
+    &::before {
+      background: url('images/icon-subways.svg') no-repeat;
+      @include sh-icon;
+      bottom: 2.25rem;
+    }
+    &::after {
+      @include sh-accent;
+    }
+  }
+}
+
+.how-to-ride {
+  text-align: center;
+}
+
+.row {
+  margin-top: 2rem;
+}
+
+.col-2 {
+  float: left;
+  width: 29vw;
+  // padding: 1.3em;
+}
+
+.col-2:first-child {
+  margin-right: 6vw;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+////////////////////
+// foorter styles //
+////////////////////
+.copyright {
+  font-weight: 700;
+  margin-top: 10vw;
+}
+
+///////////////////
+// media queries //
+///////////////////
+
+@media screen and (max-width: 960px) {
+  .col-2 {
+    width: 32vw;
+  }
+}
+
+
+@media screen and (max-width: 800px) {
+  .transport h2 {
+  margin-bottom: 6rem;
+  }
+
+  .section-image {
+    width: 50vw;
+  }
+
+  figcaption {
+    font-size: calc(#{$size-small-text} * 0.9);
+  }
+
+  .col-2 {
+    width: 37vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .section-image {
+    width: 100%;
+    margin-bottom: 6vw;
+  }
+
+  figcaption {
+    font-size: $size-small-text;
+  }
+
+  .row {
+    margin-top: 0;
+  }
+
+  .col-2 {
+    float: none;
+    width: 80vw;
+    // padding: 1.3em;
+  }
+
+  .col-2:first-child {
+    margin-right: 0;
+  }
+}

@@ -13,3 +13,38 @@ $size-header-4: 1.25rem;
 $size-nav-header: 1.625rem;
 $size-hero-text: 1.3vw;
 $size-small-text: 0.875rem;
+
+
+// some mixins because I've been repeating myself a lot
+// sh stands for section header
+@mixin sh-title {
+  position: relative;
+}
+
+@mixin sh-accent {
+  content: "__";
+  position: absolute;
+  top: 1.5rem;
+  left: 0;
+  width: 100%;
+  color: $color-accent;
+}
+
+@mixin sh-icon {
+  content: "";
+  position: absolute;
+  background-size: contain;
+  background-position: center;
+  width: 100%;
+  left: 0;
+  height: 2.5rem;
+}
+
+@mixin sh-bg {
+  display: block;
+  width: 100%;
+  font-size: 14vw;
+  font-weight: 700;
+  color: #fbfbfb;
+  text-align: center;
+}
